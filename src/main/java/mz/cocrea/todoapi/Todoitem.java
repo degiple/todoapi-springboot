@@ -13,8 +13,9 @@ public class Todoitem {
   @GeneratedValue
   private Long id;
 
-  private String summary;
-  private Boolean done = false;
+  private String name;
+  private Boolean isComplete = false;
 
-  public Todoitem() {}
+  public Todoitem() {
+  }
 }

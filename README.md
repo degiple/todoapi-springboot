@@ -17,7 +17,7 @@ Todo API の動作確認
 ## 登録
 curl http://localhost:8080/api/todoitems -XPOST \
 -H 'Content-Type: application/json' \
--d '{"summary": "my first item"}' | jq .
+-d '{"name": "my first item"}' | jq .
 
 ## リスト
 curl http://localhost:8080/api/todoitems
