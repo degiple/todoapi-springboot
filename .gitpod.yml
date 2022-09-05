@@ -1,0 +1,8 @@
+
+tasks:
+  - init: ./gradlew build
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - PKief.material-icon-theme

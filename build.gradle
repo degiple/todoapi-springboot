@@ -6,7 +6,7 @@ plugins {
 
 group = 'mz.cocrea'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 configurations {
 	compileOnly {
@@ -32,3 +32,10 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// docker {
+//     name "${name}:${version}"
+//     files bootJar.archiveFile.get()
+//     dockerfile file('./Dockerfile')
+//     buildArgs(['JAR_FILE': "${jar.archiveFileName.get()}"])
+// }

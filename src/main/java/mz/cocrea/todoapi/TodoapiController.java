@@ -2,8 +2,8 @@ package mz.cocrea.todoapi;
 
 import java.util.List;
 import java.util.Optional;
-import mz.cocrea.todoapi.Todoitem;
-import mz.cocrea.todoapi.TodoitemRepository;
+// import mz.cocrea.todoapi.Todoitem;
+// import mz.cocrea.todoapi.TodoitemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,9 +34,8 @@ public class TodoapiController {
 
   @PutMapping(value = "/todoitems/{id}")
   public Todoitem update(
-    @PathVariable Long id,
-    @RequestBody Todoitem todoitem
-  ) {
+      @PathVariable Long id,
+      @RequestBody Todoitem todoitem) {
     todoitem.setId(id);
     return todoitemrepo.save(todoitem);
   }
