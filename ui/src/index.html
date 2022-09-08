@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div id="app" class="container">
+    <div class="p-3 text-center">
+      <h1>{{ appName }}</h1>
+      <p v-if="done">完了リスト</p>
+      <p v-else>未了リスト</p>
+      <p><button v-on:click="switchTodo" class="btn btn-primary">完了/未了</button></p>
+    </div>
+    <div class="mb-3">
+      <table class="table">
+        <thead class="table-light">
+          <tr>
+            <th width="85%">内容</th>
+            <th>追加</th>
+          </tr>
+        </thead>
+        <tr>
+          <td><input v-model="name" class="form-control" /></td>
+          <td><button v-on:click="pushTodo" class="btn btn-primary">追加</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="mb-3">
+      <table class="table table-striped table-hover">
+        <thead class="table-light">
+          <tr>
+            <th width="5%">番号</th>
+            <th width="10%">状態</th>
+            <th width="50%">内容</th>
+            <th>変更</th>
+            <th>削除</th>
+            <th>編集</th>
+          </tr>
+        </thead>
+        <tr v-for="todo in getTodoitems">
+          <td>{{ todo.id }}</td>
+          <td v-if="todo.done">完了</td>
+          <td v-else>未了</td>
+          <td v-if="todo.id!=edit">{{ todo.name }}</td>
+          <td v-else><input v-model="todo.name" /></td>
+          <td><button v-on:click="changeTodo(todo.id)" class="btn btn-primary">切替</button></td>
+          <td><button v-on:click="deleteTodo(todo.id)" class="btn btn-danger">削除</button></td>
+          <td><button v-on:click="editTodo(todo.id)" class="btn btn-secondary">編集</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="./main.js" defer></script>
+</body>
+
+</html>
