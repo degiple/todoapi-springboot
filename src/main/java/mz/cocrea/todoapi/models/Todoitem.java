@@ -1,4 +1,4 @@
-package mz.cocrea.todoapi;
+package mz.cocrea.todoapi.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

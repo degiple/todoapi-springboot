@@ -1,6 +1,7 @@
-package mz.cocrea.todoapi;
+package mz.cocrea.todoapi.repositories;
 
-// import mz.cocrea.todoapi.Todoitem;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import mz.cocrea.todoapi.models.Todoitem;
 
 public interface TodoitemRepository extends JpaRepository<Todoitem, Long> {}
