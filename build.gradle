@@ -32,10 +32,3 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-// docker {
-//     name "${name}:${version}"
-//     files bootJar.archiveFile.get()
-//     dockerfile file('./Dockerfile')
-//     buildArgs(['JAR_FILE': "${jar.archiveFileName.get()}"])
-// }
