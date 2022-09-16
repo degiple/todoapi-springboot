@@ -42,8 +42,8 @@
 
           <td ><input v-model="todo.isComplete" type="checkbox" /></td>
 
-          <td v-if="isEdit"><input v-model="todo.name" type="text" /></td>
-          <td v-else><div v-on:click="isEdit = true">{{todo.name}}</div></td>
+          <td v-if="todo.isEdit"><input v-model="todo.name" type="text" /></td>
+          <td v-else><div v-on:click="todo.isEdit = true">{{todo.name}}</div></td>
 
           <td><button v-on:click="updateTodo(todo)" class="btn btn-secondary">更新</button></td>
           <td><button v-on:click="deleteTodo(todo.id)" class="btn btn-danger">削除</button></td>

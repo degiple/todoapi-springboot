@@ -23,8 +23,6 @@ todoapi.interceptors.response.use(
 const initdata = {
   appName: "TODO Application",
   todoitems: [],
-  isComplete: false,
-  isEdit: false,
   name: "",
 };
 
@@ -37,15 +35,19 @@ const app = Vue.createApp({
   },
   methods: {
     loadTodoitems() {
-      this.isEdit = false; // 編集フラグを false に
       todoapi.get("/").then((res) => {
         console.log(res.data);
-        this.todoitems = res.data;
+        this.todoitems = this.incertIsEdit(res.data);
       });
+    },
+    incertIsEdit(todoitems) {
+      for (let index = 0; index < todoitems.length; index++) {
+        todoitems[index].isEdit = false;
+      }
+      return todoitems;
     },
     addTodo() {
       if (this.name.length <= 0) this.name = "-";
-      this.isComplete = false;
       todoapi
         .post("/", {
           name: this.name,
