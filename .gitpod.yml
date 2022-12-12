@@ -1,6 +1,5 @@
-
-tasks:
-  - init: ./gradlew build
+# tasks:
+#   - init: ./gradlew bootRun
 
 vscode:
   extensions:
