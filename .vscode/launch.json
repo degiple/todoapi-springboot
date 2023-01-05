@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-TodoapiApplication<todoapi>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "mz.cocrea.todoapi.TodoapiApplication",
+      "projectName": "todoapi",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
