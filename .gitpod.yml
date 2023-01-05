@@ -4,6 +4,7 @@ tasks:
 
 vscode:
   extensions:
+    - MS-CEINTL.vscode-language-pack-ja
     - GitHub.github-vscode-theme
     - Equinusocio.vsc-material-theme-icons
     - vscjava.vscode-java-pack
