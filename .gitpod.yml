@@ -14,3 +14,6 @@ vscode:
     - vscjava.vscode-java-test
     - vscjava.vscode-maven
     - Pivotal.vscode-boot-dev-pack
+    - pivotal.vscode-spring-boot
+    - vscjava.vscode-spring-boot-dashboard
+    - vscjava.vscode-spring-initializr
